@@ -1,0 +1,126 @@
+{% extends 'basic.html' %} {% block body %} {% load static %}
+<!-- ***** Main Banner Area Start ***** -->
+<section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+          <source src=" {% static 'assets/images/course-video.mp4' %} " type="video/mp4" />
+      </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h2><em>Wel</em>Come</h2>
+            <h3 style='color:aliceblue'><em>To Achiever's Classes for JEE</em></h3>
+        </div>
+    </div>
+</section>
+<!-- ***** Main Banner Area End ***** -->
+
+
+<section class="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="features-post">
+                    <div class="features-content">
+                        <div class="content-show">
+                            <h4><i class="fa fa-pencil"></i>Courses</h4>
+                        </div>
+                        <div class="content-hide">
+                            <p>We provide the courses that are not only systematic but also explained in the very simple language.</p>
+                            <p class="hidden-sm">We provide the courses that are not only systematic but also explained in the very simple language.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="features-post second-features">
+                    <div class="features-content">
+                        <div class="content-show">
+                            <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                        </div>
+                        <div class="content-hide">
+                            <p>The quality of classes are taken seriously and if you have any suggestion it would be great if you share with us via feedback.</p>
+                            <p class="hidden-sm">The quality of videos are very good with proper lighting. I suggest to you go and checkout the various courses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="features-post third-features">
+                    <div class="features-content">
+                        <div class="content-show">
+                            <h4><i class="fa fa-book"></i>Live Meeting</h4>
+                        </div>
+                        <div class="content-hide">
+                            <p>Before any competitve exams, I use to go on a live session to motivate the students and provide some tips and tricks for that particular exam.</p>
+                            <p class="hidden-sm">Before any competitve exams, I use to go on a live session to motivate the students and provide some tips and tricks for that particular exam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="section courses" data-section="section4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Choose Your Chapter</h2>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme">
+
+                {% for i in chapter %}
+                <div class="item">
+                    <img src=" /media/{{i.image}} " alt="Course #1">
+                    <div class="down-content">
+                        <h4>{{i.chapter_name}}</h4>
+                        <p>{{i.chapter_desc}}</p>
+                        <div class="author-image">
+                            <img src=" {% static 'assets/images/author.jpeg' %} " alt="Author 1">
+                        </div>
+                        <div class="text-button-pay">
+                            <a href="{{i.yt_link}}">Expand <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section video" data-section="section5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <div class="left-content">
+                    <span>our presentation is for you</span>
+                    <h4>Watch the video to learn more <em>about Achiever's JEE</em></h4>
+                    <p>This channel is dedicated for providing the free content related to mathematics. So that every student can enhance the skills and excel the competitive exams.
+                        <br><br>The only way is to learn mathematics is to do mathematics.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <article class="video-item">
+                    <div class="video-caption">
+                        <h4>Anjesh NITJ</h4>
+                    </div>
+                    <figure>
+                        <a href="https://www.youtube.com/watch?v=qf8zymV8054" class="play"><img src=" {% static 'assets/images/hero.jpg' %} "></a>
+                    </figure>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

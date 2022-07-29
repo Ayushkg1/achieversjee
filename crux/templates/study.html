@@ -1,0 +1,68 @@
+{% extends 'basic.html' %} {% block body %} {% load static %}
+
+
+<div style="background-color:ivory ;">
+<div class="container" style=" padding: 25px; margin-top:80px;">
+    <h2 style="text-align:left">Mathematics</h2>
+    <div class="row" style="padding-bottom: 20px; margin-left:50px">
+        {% if maths|length < 1 %}
+        <div>
+            <h5 >Coming Soon...</h5>
+        </div>
+        {% endif %}
+        {% for i in maths %}
+        <div class="card" style="width: 18rem; margin:8px">
+            <div class="card-body">
+                <h5 class="card-title">{{i.main_heading}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{i.sub_heading}}</h6>
+                <a href="{{i.first_link}}" class="card-link">{{i.link_specifier_1}}</a>
+                <a href="{{i.second_link}}" class="card-link">{{i.link_specifier_2}}</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <hr>
+    <h2 style="text-align:left; ">Physics</h2>
+    <div class="row" style="padding-bottom: 20px; margin-left:50px">
+        {% if chm|length < 1 %}
+        <div>
+            <h5>Coming Soon...</h5>
+        </div>
+        {% endif %}
+        {% for i in phy %}
+        <div class="card" style="width: 18rem; margin:8px">
+            <div class="card-body">
+                <h5 class="card-title">{{i.main_heading}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{i.sub_heading}}</h6>
+                <a href="{{i.first_link}}" class="card-link">{{i.link_specifier_1}}</a>
+                <a href="{{i.second_link}}" class="card-link">{{i.link_specifier_2}}</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <hr>
+    <h2 style="text-align:left; ">Chemistry</h5>
+    <div class="row" style="padding-bottom: 20px; margin-left:50px">
+        {% if chm|length < 1 %}
+        <div>
+            <h5>Coming Soon...</h5>
+        </div>
+        {% endif %}
+        {% for i in chm %}
+        <div class="card" style="width: 18rem; margin:8px">
+            <div class="card-body">
+                <h5 class="card-title">{{i.main_heading}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{i.sub_heading}}</h6>
+                <a href="{{i.first_link}}" class="card-link">{{i.link_specifier_1}}</a>
+                <a href="{{i.second_link}}" class="card-link">{{i.link_specifier_2}}</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+</div>
+
+{% endblock %}
